@@ -8,7 +8,7 @@ function youtube(id) {
 
 export default function ChannelStatus(){
 
-    console.log(youtube('UCjzB67LSKFcDdkEcYX6Q7rg'));
+    console.log(youtube("UCjzB67LSKFcDdkEcYX6Q7rg"));
 
     return(
         <section className="channel-status">
