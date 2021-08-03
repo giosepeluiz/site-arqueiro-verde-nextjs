@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const getYoutubeData = async () => {
-  const ytKey = "AIzaSyB1iXgfYPfxSckURvDXSffPPnKWs71fypk";
-  const ytUsr = "UCjzB67LSKFcDdkEcYX6Q7rg";
-
+  
+  const ytKey = process.env.YT_KEY;
+  const ytUsr = process.env.YT_ID;
   const data = await fetch(
     `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${ytUsr}&key=${ytKey}`,
   );
