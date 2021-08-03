@@ -1,31 +1,41 @@
-import ytch from 'yt-channel-info';
+import { useState } from "react";
 
-function youtube(id) {
-    const channelId = id;
-    ytch
-      .getChannelInfo(channelId)
-      .then((response) => response)
-      .catch((err) => err);
-}
+const getYoutubeData = async () => {
+  const ytKey = "AIzaSyB1iXgfYPfxSckURvDXSffPPnKWs71fypk";
+  const ytUsr = "UCjzB67LSKFcDdkEcYX6Q7rg";
 
+  const data = await fetch(
+    `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${ytUsr}&key=${ytKey}`,
+  );
+  const response = data.json();
+  return response;
+};
 
 export default function ChannelStatus() {
-  console.log(youtube("UCjzB67LSKFcDdkEcYX6Q7rg"));
+  const [youtube, setYoutube] = useState({
+    subscriberCount: 0,
+    videoCount: 0,
+    viewCount: 0,
+  });
+
+  getYoutubeData().then((yt) => {
+    setYoutube(yt.items[0].statistics);
+  });
 
   return (
     <section className="channel-status">
       <div className="status-one">
-        <span className="status-title">900</span>
+        <span className="status-title">{youtube.subscriberCount}</span>
         <br />
         <span className="status-subtitle">inscritos</span>
       </div>
       <div className="status-two">
-        <span className="status-title">1180</span>
+        <span className="status-title">{youtube.videoCount}</span>
         <br />
         <span className="status-subtitle">vídeos</span>
       </div>
       <div className="status-three">
-        <span className="status-title">3000</span>
+        <span className="status-title">{youtube.viewCount}</span>
         <br />
         <span className="status-subtitle">visualizações</span>
       </div>
