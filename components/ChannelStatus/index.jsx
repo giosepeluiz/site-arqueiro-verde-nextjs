@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "../../styles/ChannelStatus.module.scss";
 
 const getYoutubeData = async () => {
   const ytKey = process.env.YT_KEY;
@@ -38,23 +39,27 @@ export default function ChannelStatus() {
   }, []);
 
   return (
-    <section className="channel-status">
-      <div className="status-one">
-        <span className="status-title">
+    <section className={styles["channel-status"]}>
+      <div className={styles["status-one"]}>
+        <span className={styles["status-title"]}>
           {Number(youtube.subscriberCount).toLocaleString("pt-br")}
         </span>
         <br />
-        <span className="status-subtitle">inscritos</span>
+        <span className={styles["status-subtitle"]}>inscritos</span>
       </div>
-      <div className="status-two">
-        <span className="status-title">{Number(youtube.videoCount).toLocaleString("pt-br")}</span>
+      <div className={styles["status-two"]}>
+        <span className={styles["status-title"]}>
+          {Number(youtube.videoCount).toLocaleString("pt-br")}
+        </span>
         <br />
-        <span className="status-subtitle">vídeos</span>
+        <span className={styles["status-subtitle"]}>vídeos</span>
       </div>
-      <div className="status-three">
-        <span className="status-title">{Number(youtube.viewCount).toLocaleString("pt-br")}</span>
+      <div className={styles["status-three"]}>
+        <span className={styles["status-title"]}>
+          {Number(youtube.viewCount).toLocaleString("pt-br")}
+        </span>
         <br />
-        <span className="status-subtitle">visualizações</span>
+        <span className={styles["status-subtitle"]}>visualizações</span>
       </div>
     </section>
   );
