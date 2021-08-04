@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../../styles/Main.module.scss";
-import ImageResponsive from "./ImageResponvive";
+import ImageResponsive from "./ImageResponsive";
 
 export default function Main() {
   return (
