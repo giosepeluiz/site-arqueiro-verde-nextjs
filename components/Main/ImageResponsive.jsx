@@ -21,26 +21,14 @@ const ImageResponsive = () => {
     }
   }, []);
 
-  if (windowSize.width === null) {
-    return <Image src="/images/empty.png" width={650} height={300} alt="Logo Fique no Controle" />;
-  }
-
   if (Number(windowSize.width) > 799) {
     return (
       <Image src="/images/logo-texto.svg" width={800} height={300} alt="Logo Fique no Controle" />
     );
   }
-
-  if (Number(windowSize.width) < 800) {
-    return (
-      <Image
-        src="/images/logo-texto-alt.svg"
-        width={650}
-        height={300}
-        alt="Logo Fique no Controle"
-      />
-    );
-  }
+  return (
+    <Image src="/images/logo-texto-alt.svg" width={650} height={300} alt="Logo Fique no Controle" />
+  );
 };
 
 export default ImageResponsive;
