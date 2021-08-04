@@ -7,12 +7,12 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "epic.*/:id",
+        source: "epic(.*)/:id",
         destination: "loja.*/epic/:id",
         permanent: true,
       },
       {
-        source: "loja.*/:slug/:id",
+        source: "loja(.*)/:slug/:id",
         destination: "/:slug/:id",
         permanent: true,
       },
