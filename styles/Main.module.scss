@@ -47,7 +47,7 @@ $z-index-overlay: 999;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  box-sizing: border-box;   
+  box-sizing: border-box;  
 
   &::before {
       content: "";
@@ -102,20 +102,20 @@ $z-index-overlay: 999;
           ul {
               list-style-type: none;
               display: flex;
+              align-items: center;
+              justify-content: center;
               flex-direction: row;
               margin: 2em 0;
+              padding: 0;
 
               li {
                   margin: .5em;
-
-                  a {
-                      width: 70px;
-                  }
+                  padding: 0;
               }
 
           }
 
-          .fas {
+          .fa-icon {
               color: $color-secondary;
               font-size: 3rem;
               animation: animate 3s linear infinite;
@@ -182,9 +182,15 @@ $z-index-overlay: 999;
     
                     li {
                         margin: 1em;
+                        transition: all .2s;
     
                         img {
                             width: 5em;
+                        }
+
+                        &:hover {
+                            filter: grayscale(100%) brightness(0) invert(100%);
+                            transition: all .2s;
                         }
                     }
     

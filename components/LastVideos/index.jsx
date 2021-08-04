@@ -1,9 +1,11 @@
 import styles from "../../styles/LastVideos.module.scss";
+import Playlist from "./Playlist";
+import Videos from "./Videos";
 
 export default function LastVideos() {
   return (
     <section className={styles.videos}>
-      <h1>Últimos Vídeos</h1>
+      <h1>Assista aos Vídeos</h1>
       <hr />
 
       <p className={styles["videos-text"]}>
@@ -12,43 +14,10 @@ export default function LastVideos() {
       </p>
 
       <div className={styles["videos-row"]}>
-        <div className={styles["video-item"]}>
-          <span className={styles["video-title"]}>Nome do vídeo</span>
-          <span className={styles["video-views"]}>2589 visualizações</span>
-        </div>
-
-        <div className={styles["video-item"]}>
-          <span className={styles["video-title"]}>Nome do vídeo</span>
-          <span className={styles["video-views"]}>2589 visualizações</span>
-        </div>
-
-        <div className={styles["video-item"]}>
-          <span className={styles["video-title"]}>Nome do vídeo</span>
-          <span className={styles["video-views"]}>2589 visualizações</span>
-        </div>
-
-        <div className={styles["video-item"]}>
-          <span className={styles["video-title"]}>Nome do vídeo</span>
-          <span className={styles["video-views"]}>2589 visualizações</span>
-        </div>
-
-        <div className={styles["video-item"]}>
-          <span className={styles["video-title"]}>Nome do vídeo</span>
-          <span className={styles["video-views"]}>2589 visualizações</span>
-        </div>
-
-        <div className={styles["video-item"]}>
-          <span className={styles["video-title"]}>Nome do vídeo</span>
-          <span className={styles["video-views"]}>2589 visualizações</span>
-        </div>
+        <Videos styles={styles} />
       </div>
 
-      <select>
-        <option disabled>Navegue até uma playlist</option>
-        <option>Assassin&apos;s Creed</option>
-        <option>Assassin&apos;s Creed II</option>
-        <option>Assassin&apos;s Creed III Remastered</option>
-      </select>
+      <Playlist />
     </section>
   );
 }

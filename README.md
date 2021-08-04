@@ -1,34 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Projeto de site Arqueiro Verde (arqueirover.de)
 
-## Getting Started
+ Numa versão inicial, a ideia deste projeto é dar uma cara para o endereço [arqueirover.de](https://arqueirover.de) do **Canal Fique no Controle**. Mais do que isso, a ideia também é implantar um sistema de redirecionamento de URL com encurtamento de endereços.
 
-First, run the development server:
+A ideia está num projeto bem inicial ainda, e todas as alterações feitas irei inserir aqui neste documento, se eu não me esquecer, claro. Além de que o projeto é totalmente livre pra quem quiser utilizar, modificar e melhorar, só peço que dê os créditos.
+  
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Alterações em 03 de agosto de 2021
+- Finalização da conversão de HTML5 simples para NextJs, com alguns problemas a serem corrigidos;
+- A página está praticamente responsiva em todos os dispositivos, melhorias serão feitas;
+- Na seção de informações do YouTube inseri um Fetch API a partir de uma Web API simples em JS;
+- Na seção de vídeos adicionei uma lista com alguns vídeos do canal e as playlists;
+- O item anterior foi inserido manualmente por um objeto, mas futuramente a ideia é usar API;
+- Por enquanto o redirecionamento de URLs ainda não foi feito.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+>⚠️ Este projeto está sendo desenvolvido conforme estou aprendendo os recursos de NextJs e ReactJs, portanto muita coisa ainda precisa ser refatorada com o tempo.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Fique a vontade para dar sugestões e melhorias **[contato@arqueirover.de](mailto:contato@arqueirover.de)**.

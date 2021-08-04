@@ -1,5 +1,8 @@
 import Image from 'next/image';
+import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../../styles/Main.module.scss";
+import ImageResponsive from "./ImageResponvive";
 
 export default function Main() {
   return (
@@ -7,14 +10,7 @@ export default function Main() {
       <div className={styles["main-first"]} />
       <div className={styles["main-second"]}>
         <div className={styles["submain-one"]}>
-          <Image
-            src="/images/logo-texto.svg"
-            srcSet="/images/logo-texto-alt.svg 650w,
-                    /images/logo-texto.svg 800w"
-            width={800}
-            height={300}
-            alt="Logo Fique no Controle"
-          />
+          <ImageResponsive />
         </div>
         <div className={styles["submain-two"]}>
           <span>Boas vindas! Me chame de Arqueiro Verde.</span>
@@ -101,7 +97,7 @@ export default function Main() {
             </li>
           </ul>
 
-          <i className="fas fa-angle-double-down" />
+          <FontAwesomeIcon icon={faAngleDoubleDown} className={styles["fa-icon"]} />
         </div>
       </div>
       <div className={styles["main-third"]} />

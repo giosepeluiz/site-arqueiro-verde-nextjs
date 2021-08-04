@@ -1,0 +1,12 @@
+ // const animateCount = (value) => {
+  //     let current = -1;
+  //     const timer = setInterval(function() {
+  //         current++;
+  //         console.log(current)
+  //         if (current === value) {
+  //             clearInterval(timer);
+  //         }
+  //     }, 10);
+  // }
+
+  // animateCount(288);

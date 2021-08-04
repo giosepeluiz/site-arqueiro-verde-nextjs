@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "../../styles/ChannelStatus.module.scss";
 
+// Get Youtube Data
 const getYoutubeData = async () => {
   const ytKey = process.env.YT_KEY;
   const ytUsr = process.env.YT_ID;
@@ -18,24 +19,15 @@ export default function ChannelStatus() {
     videoCount: 0,
     viewCount: 0,
   });
-
-  // const animateCount = (value) => {
-  //     let current = -1;
-  //     const timer = setInterval(function() {
-  //         current++;
-  //         console.log(current)
-  //         if (current === value) {
-  //             clearInterval(timer);
-  //         }
-  //     }, 10);
-  // }
-
-  // animateCount(288);
-
+ 
   useEffect(() => {
-    getYoutubeData().then((yt) => {
-      setYoutube(yt.items[0].statistics);
-    });
+    getYoutubeData()
+      .then((yt) => {
+        setYoutube(yt.items[0].statistics);
+      })
+      .catch((e) => {
+        console.error(e);
+      });
   }, []);
 
   return (

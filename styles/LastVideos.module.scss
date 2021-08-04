@@ -70,13 +70,30 @@ $z-index-overlay: 999;
             align-items: baseline;
             justify-content:flex-end;
             box-sizing: border-box;
-            padding: 5px;
+            padding: 10px;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 300px;
+                height: 170px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, .5);
+                z-index: $z-index-back;
+            }
 
             .video-title {
                 font-size: 1.2rem;
                 font-weight: $font-bold;
                 color: $color-white;
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+                z-index: $z-index-top;
+                text-transform: uppercase;
             }
 
             .video-views {
@@ -84,6 +101,7 @@ $z-index-overlay: 999;
                 margin-top: 2px;
                 font-weight: $font-normal;
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+                z-index: $z-index-top;
             }
         }
 

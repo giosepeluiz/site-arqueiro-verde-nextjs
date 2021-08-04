@@ -43,6 +43,7 @@
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], //should add ".ts" if typescript project
       "react/display-name": 1,
       "no-console": "off",
-      "react/jsx-props-no-spreading": "off"
+      "react/jsx-props-no-spreading": "off",
+      "jsx-a11y/no-onchange": "off"
     }
   }

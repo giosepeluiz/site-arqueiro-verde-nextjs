@@ -5,7 +5,15 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles["footer-copy"]}>
         <span>
-          Desenvolvido por Giosepe Luiz com o{" "}
+          Desenvolvido por{" "}
+          <a
+            href="https://github.com/giosepeluiz"
+            style={{ fontWeight: "bold" }}
+            target="_blank"
+            rel="noreferrer">
+            Giosepe Luiz
+          </a>{" "}
+          com o{" "}
           <span role="img" aria-label="heart">
             ❤️
           </span>{" "}
