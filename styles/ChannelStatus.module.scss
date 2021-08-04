@@ -34,10 +34,14 @@ $z-index-overlay: 999;
         font-weight: $font-bold;
         color: $color-primary-dark;
     } 
-
+    .fa-icon {
+        color: $color-secondary;
+    }
     .status-subtitle {
         font-size: 2rem;
         color: $color-primary-light;
+
+       
     }
 
 }

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { faEye, faPlay, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../../styles/ChannelStatus.module.scss";
 
 // Get Youtube Data
@@ -19,7 +21,7 @@ export default function ChannelStatus() {
     videoCount: 0,
     viewCount: 0,
   });
- 
+
   useEffect(() => {
     getYoutubeData()
       .then((yt) => {
@@ -34,6 +36,7 @@ export default function ChannelStatus() {
     <section className={styles["channel-status"]}>
       <div className={styles["status-one"]}>
         <span className={styles["status-title"]}>
+          <FontAwesomeIcon icon={faUsers} className={styles["fa-icon"]} />{" "}
           {Number(youtube.subscriberCount).toLocaleString("pt-br")}
         </span>
         <br />
@@ -41,6 +44,7 @@ export default function ChannelStatus() {
       </div>
       <div className={styles["status-two"]}>
         <span className={styles["status-title"]}>
+          <FontAwesomeIcon icon={faPlay} className={styles["fa-icon"]} />{" "}
           {Number(youtube.videoCount).toLocaleString("pt-br")}
         </span>
         <br />
@@ -48,6 +52,7 @@ export default function ChannelStatus() {
       </div>
       <div className={styles["status-three"]}>
         <span className={styles["status-title"]}>
+          <FontAwesomeIcon icon={faEye} className={styles["fa-icon"]} />{" "}
           {Number(youtube.viewCount).toLocaleString("pt-br")}
         </span>
         <br />
