@@ -1,3 +1,3 @@
 {
-  "redirects": [{ "source": "store.arqueirover.de", "destination": "arqueirover.de/store" }]
+  "rewrites": [{ "source": "store.arqueirover.de", "destination": "/store" }]
 }
