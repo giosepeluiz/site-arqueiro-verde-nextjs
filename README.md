@@ -13,6 +13,8 @@ A ideia está num projeto bem inicial ainda, e todas as alterações feitas irei
 - O item anterior foi inserido manualmente por um objeto, mas futuramente a ideia é usar API;
 - Por enquanto o redirecionamento de URLs ainda não foi feito.
 
+>⚠️ Temporariamente o redirecionamento está sendo feito através de um outro projeto privado, futuramente pretendo liberá-lo para todos, quando estiver melhorado.
+
 >⚠️ Este projeto está sendo desenvolvido conforme estou aprendendo os recursos de NextJs e ReactJs, portanto muita coisa ainda precisa ser refatorada com o tempo.
 
 Fique a vontade para dar sugestões e melhorias **[contato@arqueirover.de](mailto:contato@arqueirover.de)**.

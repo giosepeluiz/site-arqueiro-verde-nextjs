@@ -1,5 +1,0 @@
-{
-  "redirects": [
-    { "source": "store.*", "destination": "https://arqueirover.de/store" }
-  ]
-}

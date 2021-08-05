@@ -1,5 +1,3 @@
-// import { useEffect } from "react";
-// import { useRouter } from "next/router";
 import Image from "next/image";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,27 +5,6 @@ import styles from "../../styles/Main.module.scss";
 import ImageResponsive from "./ImageResponsive";
 
 export default function Main() {
-  // const router = useRouter();
-  // const subdomain = window.location.hostname.split(".")[0];
-  // const { pathname } = router;
-  // useEffect(() => {
-  //   if(subdomain !==  "arqueirover" || subdomain !==  "localhost"){
-
-  //     switch(subdomain){
-  //       case "epic":
-  //         break;
-  //       case "loja":
-  //         break;
-  //       case "store":
-  //         window.href.location =
-  //         break;
-  //       default:
-  //         return null;
-  //     }
-  //   }
-
-  // });
-
   return (
     <main className={styles.main}>
       <div className={styles["main-first"]} />
