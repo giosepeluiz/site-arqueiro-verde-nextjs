@@ -1,10 +1,24 @@
-import Image from 'next/image';
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import Image from "next/image";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../../styles/Main.module.scss";
 import ImageResponsive from "./ImageResponsive";
 
 export default function Main() {
+  const router = useRouter();
+  useEffect(() => {
+    const { pathname } = router;
+    const subdomain = location.hostname.split(".")[0];
+    console.log(router);
+    console.log(subdomain);
+    console.log(pathname);
+    // if (pathname === "/") {
+    //   router.push("/hello-nextjs");
+    // }
+  });
+
   return (
     <main className={styles.main}>
       <div className={styles["main-first"]} />

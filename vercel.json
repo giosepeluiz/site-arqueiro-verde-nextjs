@@ -1,3 +1,0 @@
-{
-  "rewrites": [{ "source": "store.arqueirover.de", "destination": "/store" }]
-}
