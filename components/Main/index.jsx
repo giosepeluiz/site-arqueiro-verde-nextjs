@@ -8,15 +8,24 @@ import ImageResponsive from "./ImageResponsive";
 
 export default function Main() {
   // const router = useRouter();
+  // const subdomain = window.location.hostname.split(".")[0];
+  // const { pathname } = router;
   // useEffect(() => {
-  //   const { pathname } = router;
-  //   const subdomain = window.location.hostname.split(".")[0];
-  //   if (subdomain === "epic") {
-  //     router.push("/store/epic/");
+  //   if(subdomain !==  "arqueirover" || subdomain !==  "localhost"){
+
+  //     switch(subdomain){
+  //       case "epic":
+  //         break;
+  //       case "loja":
+  //         break;
+  //       case "store":
+  //         window.href.location =
+  //         break;
+  //       default:
+  //         return null;
+  //     }
   //   }
-  //   if (subdomain === "loja") {
-  //     router.push("/store/");
-  //   }
+
   // });
 
   return (
