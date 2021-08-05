@@ -1,6 +1,5 @@
 {
   "redirects": [
-    { "source": "/(.*)", "destination": "https://arqueirover.de/epic" },
-    { "source": "/(.*)", "destination": "https://arqueirover.de/loja" }
+    { "source": "/(.*)", "destination": "https://arqueirover.de/store" }
   ]
 }
