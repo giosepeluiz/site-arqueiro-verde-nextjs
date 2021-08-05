@@ -10,7 +10,9 @@ export default function Main() {
   const router = useRouter();
   useEffect(() => {
     const { pathname } = router;
+    const subdomain = location.hostname.split(".")[0];
     console.log(router);
+    console.log(subdomain);
     console.log(pathname);
     // if (pathname === "/") {
     //   router.push("/hello-nextjs");
