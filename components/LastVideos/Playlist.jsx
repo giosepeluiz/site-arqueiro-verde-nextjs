@@ -291,7 +291,7 @@ export default function Playlist() {
   ]);
 
   return (
-    <select defaultValue="default" onChange={(e) => goToURL(e)} onBlur={(e) => goToURL(e)}>
+    <select defaultValue="default" onChange={(e) => goToURL(e)}>
       <option value="default" disabled>
         Navegue até uma playlist
       </option>

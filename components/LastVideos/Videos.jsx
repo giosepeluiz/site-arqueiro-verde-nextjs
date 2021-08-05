@@ -47,7 +47,7 @@ export default function Videos(props) {
           className={props.styles["video-item"]}
           style={{
             backgroundImage: `url('https://img.youtube.com/vi/${e.videoId}/mqdefault.jpg')`,
-            backgroundSize: "cover",
+            backgroundSize: "contain",
           }}
           onClick={() => goToURL(`https://www.youtube.com/watch?v=${e.videoId}`)}
           onKeyPress={null}

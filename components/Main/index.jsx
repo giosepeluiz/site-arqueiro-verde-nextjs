@@ -97,7 +97,10 @@ export default function Main() {
             </li>
           </ul>
 
-          <FontAwesomeIcon icon={faAngleDoubleDown} className={styles["fa-icon"]} />
+          <div
+            style={{ width: "100px", height: "100px", display: "flex", justifyContent: "center" }}>
+            <FontAwesomeIcon icon={faAngleDoubleDown} className={styles["fa-icon"]} />
+          </div>
         </div>
       </div>
       <div className={styles["main-third"]} />

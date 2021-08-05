@@ -19,6 +19,7 @@ $z-index-top: 1;
 $z-index-overlay: 999;
 
 .videos {
+    min-height: 100vh;
     height: fit-content;
     width: 100vw;
     box-sizing: border-box;
@@ -140,8 +141,28 @@ $z-index-overlay: 999;
             font-size: 1.5rem;
         }
         .videos-row {
-            display: flex;
+            flex-direction: column;
             margin: 10px 10px;
+        }
+    }
+}
+
+
+//¿ TELAS ACIMA DE 750PX
+@media (min-width: 750px) {
+
+    .videos {
+        .videos-text {
+            font-size: 1.5rem;
+        }
+        .videos-row {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+           
+            .video-item {
+                margin: 10px 10px;
+            }
         }
     }
 }
@@ -171,6 +192,35 @@ $z-index-overlay: 999;
             width: fit-content;
             padding-right: 50px;
             font-size: 1.8rem;
+        }
+    }
+}
+
+//¿ TELAS ACIMA DE 1200PX
+@media (min-width: 1300px) {
+    .videos {
+        .videos-row {
+            max-width: 1290px;
+
+            .video-item {
+                width: 400px;
+                height: 227px;
+                padding: 20px;
+
+                &::before {
+                    width: 400px;
+                    height: 227px;
+                }
+
+                .video-title {
+                    font-size: 1.5rem;
+                }
+
+                .video-views {
+                    font-size: 1.2rem;
+                }
+            }
+
         }
     }
 }
