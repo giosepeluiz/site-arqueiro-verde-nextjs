@@ -1,20 +1,73 @@
-## Projeto de site Arqueiro Verde (arqueirover.de)
+# Modelo básico de Next.js
 
- Numa versão inicial, a ideia deste projeto é dar uma cara para o endereço [arqueirover.de](https://arqueirover.de) do **Canal Fique no Controle**. Mais do que isso, a ideia também é implantar um sistema de redirecionamento de URL com encurtamento de endereços.
+Este modelo básico inclui algumas alterações pessoais em relação ao projeto padrão de **Next.js**, dentre elas:
+- Novo esquema de pastas;
+- Com arquivos pré-configurados;
+- Configurado para Typescript;
+- Eslint e Prettier configurados;
+- Toda a configuração foi feita usando Yarn.
 
-A ideia está num projeto bem inicial ainda, e todas as alterações feitas irei inserir aqui neste documento, se eu não me esquecer, claro. Além de que o projeto é totalmente livre pra quem quiser utilizar, modificar e melhorar, só peço que dê os créditos.
-  
+## Esquema de pastas
 
-### Alterações em 03 de agosto de 2021
-- Finalização da conversão de HTML5 simples para NextJs, com alguns problemas a serem corrigidos;
-- A página está praticamente responsiva em todos os dispositivos, melhorias serão feitas;
-- Na seção de informações do YouTube inseri um Fetch API a partir de uma Web API simples em JS;
-- Na seção de vídeos adicionei uma lista com alguns vídeos do canal e as playlists;
-- O item anterior foi inserido manualmente por um objeto, mas futuramente a ideia é usar API;
-- Por enquanto o redirecionamento de URLs ainda não foi feito.
+**SRC:** esta pasta inclui todas as partes do projeto, organizados por:
+- Components: arquivos de componentes;
+- Data: arquivos de dados em formato JSON;
+- Functions: funções para a parte lógica;
+- Models: classes utilizadas como modelos;
+- Pages: as páginas do projeto;
+- Styles: todos os estilos em SASS.
 
->⚠️ Temporariamente o redirecionamento está sendo feito através de um outro projeto privado, futuramente pretendo liberá-lo para todos, quando estiver melhorado.
+**PUBLIC:** contem tudo aquilo que será de acesso público:
+- Icons: ícones a serem utilizados;
+- Images: todas as imagens;
+- Vectors: todos os vetores.
 
->⚠️ Este projeto está sendo desenvolvido conforme estou aprendendo os recursos de NextJs e ReactJs, portanto muita coisa ainda precisa ser refatorada com o tempo.
+> Lembrando que estas pastas podem ser alteradas a vontade de acordo com a necessidade do projeto, este é só um modelo.
 
-Fique a vontade para dar sugestões e melhorias **[contato@arqueirover.de](mailto:contato@arqueirover.de)**.
+## Linhas do SASS/SCSS
+
+Por padrão este projeto utiliza o pré-processador SAAS, mas para que as variáveis funcionem corretamente nos estilos dos componentes é importante que carregue a linha `@import "vendor/_defaults"`
+
+
+### Breakpoints
+
+Para definir um breakpoint carregue o comando:
+```
+@include breakpoint('TAMANHO'){
+    // Código
+  }
+```
+
+Onde:
+- **small-only** = < 600px
+- **small-up** = > 600px
+- **medium-only** = < 900px
+- **medium-up** = > 900px
+- **large-only** = < 1200px
+- **large-up** = > 1200px
+
+### Z-Index
+
+Existem variáveis com z-index pré-definidos, para isso utilize, sem aspas, o padrão: `z-index: z-index(VALOR)`, onde:
+- **above** = 500
+- **modal** = 400
+- **overlay** = 300
+- **dropdown** = 200
+- **default** = 1
+- **below** = -1
+
+### Cores Globais
+
+Também tem as variáveis de cores globais (root), onde utiliza-se `color: --color-esquema-nome`, onde a personalização deve ser feita em `@import "vendor/_colors"` que já vem com alguns modelos pré-carregados.
+
+### Converter pixels para rem
+
+O ideal é que utilize sempre REM no lugar de PIXELS para a maior parte do código, então utilize `rem(valor em px)`, pois o próprio SCSS fará a conversão. Por exemplo `rem(12)` que seria 12px será convertido para `1.33rem`.
+
+### Outras variáveis
+
+A pasta `@import "vendor/_variables"` conta com outras variáveis de medida e padrões.
+
+
+
+Última alteração em **02 de setembro de 2021**.
