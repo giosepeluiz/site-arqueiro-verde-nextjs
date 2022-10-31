@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
 const Home = () => (
@@ -13,6 +14,12 @@ const Home = () => (
       <span className={styles["main-subtitle-arrow"]}>{`=>`}</span>
       <span className={styles["main-subtitle-dev"]}>{`{ desenvolvedor web }`}</span>
     </div>
+
+    <ul className={styles["main-menu"]}>
+      <li className={styles["main-menu-icon"]}>
+        <Image src="/images/logo-github-white.svg" width="70" height="70" alt="Logotipo Github" />
+      </li>
+    </ul>
   </main>
 );
 
