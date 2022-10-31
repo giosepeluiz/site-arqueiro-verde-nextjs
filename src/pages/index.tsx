@@ -1,9 +1,19 @@
+import styles from "../styles/Home.module.scss";
+
 const Home = () => (
-  <>
-    <div style={{ textAlign: "center", marginTop: 300 }}>
-      <h1>Em construção...</h1>
+  <main className={styles["main-wrapper"]}>
+    <div className={styles["main-title"]}>
+      <span className={styles["main-title-emphasis"]}>&#10094;</span>
+      <span className={styles["main-title-middle"]}>ArqueiroVerde</span>
+      <span className={styles["main-title-emphasis"]}>/&#10095;</span>
     </div>
-  </>
+
+    <div className={styles["main-subtitle"]}>
+      <span className={styles["main-subtitle-name"]}>Giosepe Luiz</span>
+      <span className={styles["main-subtitle-arrow"]}>{`=>`}</span>
+      <span className={styles["main-subtitle-dev"]}>{`{ desenvolvedor web }`}</span>
+    </div>
+  </main>
 );
 
 export default Home;
