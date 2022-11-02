@@ -1,11 +1,37 @@
+import { NextSeo } from "next-seo";
 import Image from "next/image";
-import { useState } from "react";
 import styles from "../styles/Home.module.scss";
 
-const Home = () => {
-  const [tipClass, setTipClass] = useState("none");
+const Home = () => (
+  <>
+    {/* SEO com personalização - Documentação: https://www.npmjs.com/package/next-seo */}
+    <NextSeo
+      title="Arqueiro Verde - Desenvolvimento Web"
+      description="Arqueiro Verde - Desenvolvimento Web"
+      openGraph={{
+        type: "website",
+        url: "https://arqueirover.de",
+        title: "Arqueiro Verde - Desenvolvimento Web",
+        description: "Arqueiro Verde - Desenvolvimento Web",
+        images: [
+          {
+            url: ".",
+            width: 800,
+            height: 420,
+            alt: "Arqueiro Verde - Desenvolvimento Web",
+          },
+          { url: "images/og-banner.jpg" },
+        ],
+        site_name: "Arqueiro Verde - Desenvolvimento Web",
+      }}
+      additionalLinkTags={[
+        {
+          rel: "icon",
+          href: "icons/favicon.ico",
+        },
+      ]}
+    />
 
-  return (
     <main className={styles["main-wrapper"]}>
       <div className={styles["main-title"]}>
         <span className={styles["main-title-emphasis"]}>&#10094;</span>
@@ -27,8 +53,6 @@ const Home = () => {
               width="70"
               height="70"
               alt="Logotipo Github"
-              onMouseEnter={setTipClass("block")}
-              onMouseLeave={setTipClass("none")}
             />
           </a>
         </li>
@@ -36,7 +60,7 @@ const Home = () => {
       <div className={styles["main-tip"]}>[descer]</div>
       <div className={styles["main-arrow"]}>&#x21d3;</div>
     </main>
-  );
-};
+  </>
+);
 
 export default Home;
