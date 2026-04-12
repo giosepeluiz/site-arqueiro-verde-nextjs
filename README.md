@@ -1,73 +1,70 @@
-# Modelo básico de Next.js
+# Getting Started with Create React App
 
-Este modelo básico inclui algumas alterações pessoais em relação ao projeto padrão de **Next.js**, dentre elas:
-- Novo esquema de pastas;
-- Com arquivos pré-configurados;
-- Configurado para Typescript;
-- Eslint e Prettier configurados;
-- Toda a configuração foi feita usando Yarn.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Esquema de pastas
+## Available Scripts
 
-**SRC:** esta pasta inclui todas as partes do projeto, organizados por:
-- Components: arquivos de componentes;
-- Data: arquivos de dados em formato JSON;
-- Functions: funções para a parte lógica;
-- Models: classes utilizadas como modelos;
-- Pages: as páginas do projeto;
-- Styles: todos os estilos em SASS.
+In the project directory, you can run:
 
-**PUBLIC:** contem tudo aquilo que será de acesso público:
-- Icons: ícones a serem utilizados;
-- Images: todas as imagens;
-- Vectors: todos os vetores.
+### `npm start`
 
-> Lembrando que estas pastas podem ser alteradas a vontade de acordo com a necessidade do projeto, este é só um modelo.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Linhas do SASS/SCSS
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Por padrão este projeto utiliza o pré-processador SAAS, mas para que as variáveis funcionem corretamente nos estilos dos componentes é importante que carregue a linha `@import "vendor/_defaults"`
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Breakpoints
+### `npm run build`
 
-Para definir um breakpoint carregue o comando:
-```
-@include breakpoint('TAMANHO'){
-    // Código
-  }
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Onde:
-- **small-only** = < 600px
-- **small-up** = > 600px
-- **medium-only** = < 900px
-- **medium-up** = > 900px
-- **large-only** = < 1200px
-- **large-up** = > 1200px
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Z-Index
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Existem variáveis com z-index pré-definidos, para isso utilize, sem aspas, o padrão: `z-index: z-index(VALOR)`, onde:
-- **above** = 500
-- **modal** = 400
-- **overlay** = 300
-- **dropdown** = 200
-- **default** = 1
-- **below** = -1
+### `npm run eject`
 
-### Cores Globais
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Também tem as variáveis de cores globais (root), onde utiliza-se `color: --color-esquema-nome`, onde a personalização deve ser feita em `@import "vendor/_colors"` que já vem com alguns modelos pré-carregados.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Converter pixels para rem
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-O ideal é que utilize sempre REM no lugar de PIXELS para a maior parte do código, então utilize `rem(valor em px)`, pois o próprio SCSS fará a conversão. Por exemplo `rem(12)` que seria 12px será convertido para `1.33rem`.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### Outras variáveis
+## Learn More
 
-A pasta `@import "vendor/_variables"` conta com outras variáveis de medida e padrões.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-Última alteração em **02 de setembro de 2021**.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
